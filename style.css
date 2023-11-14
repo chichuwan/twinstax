@@ -1,0 +1,192 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  .loading-screen {
+    background: url("imgs/loading.gif") no-repeat center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  .crane-container {
+    position: relative;
+    height: 150px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  #crane-arm {
+    position: absolute;
+    width: 100px;
+    height: 10px;
+    background: grey;
+    animation: moveCrane 4s infinite;
+  }
+  
+  .block {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: grey;
+    bottom: 0;
+  }
+  
+  #block1 { left: 20%; }
+  #block2 { left: 40%; }
+  #block3 { left: 60%; }
+  
+  .progress-bar {
+    width: 100%;
+    height: 20px;
+  }
+  
+  .progress {
+    width: 0;
+    height: 300%;
+    background: repeating-linear-gradient(
+      -45deg,
+      orange,
+      orange 10px,
+      black 10px,
+      black 20px
+    );
+    animation: loadProgress 4s forwards;
+  }
+  
+  @keyframes moveCrane {
+    0%, 100% { top: 0; }
+    25%, 75% { top: -100px; }
+  }
+  
+  @keyframes loadProgress {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  .background-container {
+    width: 100%;
+    height: 110%;
+    background-image: url(imgs/bg.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+  }
+
+  /* button{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+  } */
+
+  .wp{
+    width: 12%;
+    height: 5%;
+    /* border: solid; */
+    position: absolute;
+    left: 17%;
+    top: 2%;
+    cursor: pointer;
+  }
+
+  .twt{
+    width: 4%;
+    height: 10%;
+    position: absolute;
+    /* border: solid; */
+    top: 20%;
+    left: 47%;
+    cursor: pointer;
+  }
+
+  .tg{
+    width: 4.5%;
+    height: 9%;
+    position: absolute;
+    /* border: solid; */
+    top: 42%;
+    left: 58%;
+    cursor: pointer;
+  }
+
+  .dex{
+    width: 4%;
+    height: 9%;
+    position: absolute;
+    /* border: solid; */
+    top: 38%;
+    left: 42%;
+    cursor: pointer;
+  }
+
+  .about{
+    width: 18%;
+    height: 15%;
+    /* border: solid; */
+    /* background-image: url(imgs/about3.png); */
+    /* background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; */
+    
+    position: absolute;
+    top: 30%;
+    left: 13%;
+    cursor: pointer;
+    /* animation: animateUser 5s linear infinite;
+    cursor: pointer; */
+  }
+
+  .token{
+    width: 13%;
+    height: 10%;
+    /* border: solid; */
+    /* background-image: url(imgs/tr3.png); */
+    /* background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; */
+    position: absolute;
+    bottom: 22%;
+    right: 1%;
+    cursor: pointer;
+  }
+
+ /* @keyframes animateUser {
+    20%{
+        top: 11%;
+    }
+    50%{
+      right: 50%;
+    }
+ }  */
+  
+  /* Adjustments for smaller screens */
+  /* @media (max-width: 844px) {
+    .background-container{
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+    }
+  } */
+  
+  /* .image-position {
+    position: absolute;
+    background-position: center;
+    top: 544px;
+    right: 23px;
+  } */
+  
+  /* .image-position2 {
+    background-position: center;
+    position: absolute;
+    top: 200px;
+    left: 210px
+    
+  } */

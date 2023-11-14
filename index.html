@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./imgs/logo.jpg">
+    <title>Twinstax</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="loading-screen" class="loading-screen">
+        <!-- <div class="crane-container">
+            <div id="crane-arm"></div>
+            <div id="block1" class="block"></div>
+            <div id="block2" class="block"></div>
+            <div id="block3" class="block"></div>
+        </div> -->
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+    </div>
+
+    <div class="background-container">
+
+        <div class="wp"></div>
+        <div class="about"></div>
+        <div class="token"></div>
+        <div class="twt"></div>
+        <div class="tg"></div>
+        <div class="dex"></div>
+
+    </div>
+
+    <script>
+
+        document.querySelector(".about").addEventListener("click", function(){
+            window.open("aboutus.html","_blank");
+        })
+
+        document.querySelector(".token").addEventListener("click", function(){
+            window.open("token.html","_blank");
+        })
+
+        document.querySelector(".wp").addEventListener("click", function(){
+            window.open("aboutus.html","_blank");
+        })
+
+        document.querySelector(".twt").addEventListener("click", function(){
+            window.open("twitter.com","_blank");
+        })
+
+        document.querySelector(".tg").addEventListener("click", function(){
+            window.open("telegram.com","_blank");
+        })
+
+        document.querySelector(".dex").addEventListener("click", function(){
+            window.open("ambot","_blank");
+        })
+
+        document.addEventListener("DOMContentLoaded", function() {
+        var progress = document.querySelector('.progress');
+        var blocks = document.querySelectorAll('.block');
+        var craneArm = document.getElementById('crane-arm');
+        var currentBlock = 0;
+
+        var interval = setInterval(function(){
+            if (currentBlock < blocks.length) {
+                craneArm.style.top = '0px';
+                setTimeout(function() {
+                    blocks[currentBlock].style.bottom = '150px'; // height of the crane container
+                    currentBlock++;
+                }, 1000);
+            } else {
+                clearInterval(interval);
+                setTimeout(function(){
+                    var loadingScreen = document.getElementById('loading-screen');
+                    loadingScreen.style.display = 'none';
+                }, 1000); // You might want to link this to actual loading progress
+            }
+            }, 2000);
+        });
+
+    </script>
+</body>
+</html>
